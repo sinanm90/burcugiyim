@@ -15,7 +15,7 @@
         type: "GET",
         dataType: "jsonp",
         cache: false,
-        url: "https://api.instagram.com/v1/users/[571891066945890]/media/recent/?access_token=[4e5951fdc3c4678ca0587c60d4dac83e]",
+        url: "https://api.instagram.com/v1/users/2127137581/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d",
         success: function(data) {
             for (var i = 0; i < 7; i++) {
         $("#instagrams").append("<li ><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url +"' /></a></li>");
