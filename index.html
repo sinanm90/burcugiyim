@@ -9,7 +9,7 @@ cache: false,
 url: "https://api.instagram.com/v1/users/2127137581/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d",
 success: function(data) {
 for (var i = 0; i < 6; i++) {
-$(".ecancaninstagramapi ul").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url +"' /></a></li>");
+$(".instagramapi ul").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url +"' /></a></li>");
 }
 }
 });
