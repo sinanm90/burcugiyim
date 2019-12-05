@@ -21,3 +21,25 @@ $(".ecancaninstagramapi ul").append("<li><a target='_blank' href='" + data.data[
 });
 
 </script>
+
+<script>
+ $instagrams = $('.instagrams');
+$.ajax({
+ type: "GET",
+ url: "https://api.instagram.com/v1/users/kullanici id buraya /media/recent/?access_token=bu bolume acces token kodunu girin",
+ dataType: "jsonp",
+ success: function (json) {
+ $(json.data).each(function(e) {
+ $instagrams.append(
+ '<div class="instagram">' +
+ '<div class="user">' +
+ '<img src="' + this.user.profile_picture + '" />' +
+ '<h1>' + this.user.full_name + '</h1>' +
+ '</div>' +
+ '<img src="' + this.images.low_resolution.url + '" />' +
+ '</div>'
+ );
+ });
+ }
+});
+ </script>
