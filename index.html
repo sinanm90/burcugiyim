@@ -22,10 +22,18 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
       <style type="text/css">
-.kolon { float:left; border:0px solid red; padding:5px; margin-left: auto;  margin-right: auto;display: table ; width: 25%;font-size: 10px;}
-.kolon1 { float:left ; border:0px solid red; padding:5px; margin-left: auto;  margin-right: auto;display: table; width: 25%;font-size: 10px;}
-.kolon2 { float:left; border:0px solid red; padding:5px; margin-left: auto;  margin-right: auto;display: block; width: 25%;font-size: 10px;}
-.kolon3 { float:left; border:0px solid red; padding:5px; margin-left: auto;  margin-right: auto;display: block; width: 25%;font-size: 10px;}
+.kolon { float:left; border:1px solid #f5f5f0; padding:5px; margin-left: auto;  text-align: left;line-height: 20px;  font-size: 12px; 
+margin-right: auto;display: block ; width: 25%;}
+
+.kolon1 { float:left; border:1px solid #f5f5f0; padding:5px; margin-left: auto;  text-align: left;line-height: 20px;  font-size: 12px; 
+margin-right: auto;display: block ; width: 25%;}
+
+.kolon2 { float:left; border:1px solid #f5f5f0; padding:5px; margin-left: auto;  text-align: left;line-height: 20px;  font-size: 12px; 
+margin-right: auto;display: block ; width: 25%;}
+
+.kolon3 { float:left; border:1px solid #f5f5f0; padding:5px; margin-left: auto;  text-align: left;line-height: 20px;  font-size: 12px; 
+margin-right: auto;display: block ; width: 25%;}
+}
 </style>
   
 </head>
@@ -60,7 +68,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/t">Mertsoft</a></section><section class="header4 cid-rJXHpgzhrM mbr-fullscreen" id="header4-a">
+<section class="engine"><a href="https://burcugiyim.com">Mertsoft</a></section><section class="header4 cid-rJXHpgzhrM mbr-fullscreen" id="header4-a">
 
     
 
@@ -81,6 +89,7 @@
  
 <div class="kolon">
 <script>
+
 $(function() {
 $.ajax({
 type: "GET",
@@ -88,9 +97,14 @@ dataType: "jsonp",
 cache: false,
 url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d&count=70",
 
+
 success: function(data) {
 for (var i = 0; i < 8; i++) {
-$(".kolon").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url +"' />"+ data.data[i].caption.text + "</a></li>");
+	var jsonDate =  data.data[i].created_time;
+		var date = new Date(parseInt(jsonDate) * 1000);
+		var saat = (date.getDate() + "/" + (date.getMonth()+1) +"/"+date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes());
+$(".kolon").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+data.data[i].caption.text +("<br>")+('Eklenme: '+saat)+"  </a></li>");
+
 }
 }
 });
@@ -107,8 +121,13 @@ dataType: "jsonp",
 cache: false,
 url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d&count=70",
 success: function(data) {
-for (var i = 8; i < 16; i++) {
-$(".kolon1").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+ data.data[i].caption.text + "</a></li>");
+for (var i = 8; i < 16; i++) 
+{
+	var jsonDate =  data.data[i].created_time;
+		var date = new Date(parseInt(jsonDate) * 1000);
+		var saat = (date.getDate() + "/" + (date.getMonth()+1) +"/"+date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes());
+$(".kolon1").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+data.data[i].caption.text +("<br>")+('Eklenme: '+saat)+"  </a></li>");
+
 }
 }
 });
@@ -126,7 +145,11 @@ cache: false,
 url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d&count=70",
 success: function(data) {
 for (var i = 16; i < 24; i++) {
-$(".kolon2").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+ data.data[i].caption.text + "</a></li>");
+	var jsonDate =  data.data[i].created_time;
+		var date = new Date(parseInt(jsonDate) * 1000);
+		var saat = (date.getDate() + "/" + (date.getMonth()+1) +"/"+date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes());
+$(".kolon2").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+data.data[i].caption.text +("<br>")+('Eklenme: '+saat)+"  </a></li>");
+
 }
 }
 });
@@ -143,8 +166,12 @@ dataType: "jsonp",
 cache: false,
 url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2127137581.1677ed0.ae9646babed1422b8df5f3ed27ec8c8d&count=70",
 success: function(data) {
-for (var i = 24; i < 33; i++) {
-$(".kolon3").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url +"' />"+ data.data[i].caption.text + "</a></li>");
+for (var i = 24; i < 35; i++) {
+	var jsonDate =  data.data[i].created_time;
+		var date = new Date(parseInt(jsonDate) * 1000);
+		var saat = (date.getDate() + "/" + (date.getMonth()+1) +"/"+date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes());
+$(".kolon3").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+data.data[i].caption.text +("<br>")+('Eklenme: '+saat)+"  </a></li>");
+
 }
 }
 });
