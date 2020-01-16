@@ -112,7 +112,7 @@ for (var i = 0; i < 8; i++) {
 	var jsonDate =  data.data[i].created_time;
 		var date = new Date(parseInt(jsonDate) * 1000);
 		var saat = (date.getDate() + "." + (date.getMonth()+1) +"."+date.getFullYear() + "-" + date.getHours() + ":" + date.getMinutes());
-$(".kolon").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"+data.data[i].caption.text +("<br>")+('Eklenme: '+saat)+"  </a></li>");
+$(".kolon").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.low_resolution.url + "' />"('Eklenme: '+saat)+"  </a></li>");
 
 }
 }
