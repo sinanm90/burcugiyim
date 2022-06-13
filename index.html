@@ -17,12 +17,25 @@ body { background-color: #fafafa; line-height:1.6;}
 </head>
 
 <body>
-  <script type="text/javascript"
-src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="jquery-feed-instagram-graph.js?v5"></script>
+  <div class="container">
   <div id="instagram-feed1" class="instagram_feed"></div>
-
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="jquery-feed-instagram-graph.js?v5"></script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
 </body>
 </html>
+
