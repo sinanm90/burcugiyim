@@ -31,9 +31,6 @@
                 $('#instagram-feed1').append(html);
             }
         },
-        error: function(data) {
-            var html = '<div class="class-no-data">No Images Found</div>';
-            $('#instagram-feed1').append(html);
-            }
+       
     });
 }
