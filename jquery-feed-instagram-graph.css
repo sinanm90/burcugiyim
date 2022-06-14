@@ -13,7 +13,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.instagram_feed img.insta-image {
+.instagram_feed .insta-image {
   position: absolute;
   left: 0;
   top: 0;
