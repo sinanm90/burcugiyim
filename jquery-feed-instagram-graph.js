@@ -3,7 +3,7 @@ if ( $('#instagram-feed1').length != 0 ) {
 
     var token = 'IGQVJWN0hYY0l4SGFuOUFSSC1fTkVVeWdvMXJNVjlGdHVNTHp0RlF2T1hvQ1kwUkhkaTRMQUhoVFNRUmpGT2tuSXJET2J2QmEyd0x2ZAEFuX3lXZA2JCdkwtQ2J4cVR3aE90NmFILU1UUnd5ZATRqeEpZAaQZDZD';
     var fields = 'id,media_type,media_url,thumbnail_url,timestamp,permalink,caption';
-    var limit = 6; // Set a number of display items
+    var limit = 20; // Set a number of display items
 
     $.ajax ( {
         url: 'https://graph.instagram.com/me/media?fields='+ fields +'&access_token='+ token +'&limit='+ limit,
@@ -32,7 +32,7 @@ if ( $('#instagram-feed1').length != 0 ) {
             }
         },
         error: function(data) {
-            var html = '<div class="class-no-data">No Images Found</div>';
+            var html = '<div class="class-no-data">Bir Hata Oluştu</div>';
             $('#instagram-feed1').append(html);
             }
     });
