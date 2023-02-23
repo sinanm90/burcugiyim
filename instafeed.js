@@ -12,7 +12,7 @@
   function Instafeed(options) {
     assert(!options || typeof options === "object", "options must be an object, got " + options + " (" + typeof options + ")");
     var opts = {
-      accessToken: null,
+      accessToken: 'IGQVJWYk4tN0twR1FmUmczV0t0WnBIRVU2bFNxYXMyRnJHdmE0TjhNamRzYjVsZADl6Q1BTUXJwRXhWb1VJRW1fdEs5OExaT25tLUprZAjJ0aE5MTllFbmZAKd1h0aERSZAzV0c2N5dURLSFRPa3dMY09CNQZDZD',
       accessTokenTimeout: 1e4,
       after: null,
       apiTimeout: 1e4,
