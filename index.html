@@ -27,18 +27,31 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
   
-  <style>
-.button-group a {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+<style>
+  .btn-custom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 1 1 200px;
+    justify-content: center;
+  }
 
+  .btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .btn-custom {
+      flex: 1 1 100%;
+    }
+  }
 </style>
   
 </head>
@@ -68,7 +81,9 @@ try {
 }
 </script>
 <!-- /Analytics -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- Buton grubu -->
 
   
   <section data-bs-version="5.1" class="header5 cid-tyudDWtzfM mbr-fullscreen" id="header5-q">
@@ -85,24 +100,24 @@ try {
                 <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white mb-3 display-7"><strong><em>1975 ten bugüne..</em></strong></h2>
                 <p class="mbr-text mbr-fonts-style mbr-white display-7"></p>
 <div class="button-group" style="
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  max-width: 400px;
-  margin: 20px auto;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 600px;
 ">
-  <a class="btn btn-primary" href="index.html#contacts3-m" style="padding: 12px; font-size: 16px;">
-    📞 İletişim
+  <a href="index.html#contacts3-m" class="btn-custom" style="background: #007bff;">
+    <i class="fas fa-phone"></i> İletişim
   </a>
-  <a class="btn btn-info" href="https://wa.me/905068513593" target="_blank" style="padding: 12px; font-size: 16px;">
-    💬 WhatsApp
+  <a href="https://wa.me/905068513593" target="_blank" class="btn-custom" style="background: #25D366;">
+    <i class="fab fa-whatsapp"></i> WhatsApp
   </a>
-  <a class="btn btn-success" href="https://www.instagram.com/burcu_giyim/" target="_blank" style="padding: 12px; font-size: 16px;">
-    📸 Instagram
+  <a href="https://www.instagram.com/burcu_giyim/" target="_blank" class="btn-custom" style="background: #E1306C;">
+    <i class="fab fa-instagram"></i> Instagram
   </a>
-  <a class="btn btn-warning" href="index.html#content15-o" style="padding: 12px; font-size: 16px;">
-    💼 IBAN
+  <a href="index.html#content15-o" class="btn-custom" style="background: #ffc107;">
+    <i class="fas fa-credit-card"></i> IBAN
   </a>
 </div>
 
