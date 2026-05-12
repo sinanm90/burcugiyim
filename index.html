@@ -52,6 +52,60 @@
       flex: 1 1 100%;
     }
   }
+   /* Buton Grubu Konteyneri */
+  .button-group-premium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+
+  /* Yeni Premium Buton Tasarımı */
+  .btn-premium {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 30px;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(212, 175, 55, 0.5); /* Altın rengi ince çerçeve */
+    background: rgba(255, 255, 255, 0.05); /* Çok hafif şeffaflık */
+    backdrop-filter: blur(10px); /* Arka planı bulandırır (Cam efekti) */
+    border-radius: 0px; /* Keskin köşeler daha ciddi ve lüks durur */
+    transition: all 0.4s ease;
+    min-width: 220px;
+    overflow: hidden;
+  }
+
+  /* Butonun üzerine gelince olacaklar */
+  .btn-premium:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+  }
+
+  /* Altın rengi parlatma efekti */
+  .btn-premium i {
+    color: #d4af37;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .btn-premium {
+      flex: 1 1 100%;
+      min-width: 100%;
+    }
+  }
 </style>
   
 </head>
